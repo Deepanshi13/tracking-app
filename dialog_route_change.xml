@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/deatils_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="25dp"
+            android:background="@color/dark_blue">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="@string/route_change"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_name">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="From Date"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text=" To Date"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearlay">
+
+                <TextView
+                    android:id="@+id/fromDate_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/datepick_bg"
+                    android:drawableStart="@drawable/date_range"
+                    android:gravity="center"
+                    android:hint="@string/fromDate"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/toDate_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight=".5"
+                    android:background="@drawable/datepick_bg"
+                    android:drawableStart="@drawable/date_range"
+                    android:gravity="center"
+                    android:hint="@string/toDate"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/reamrk_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/linearlayout"
+                app:layout_constraintStart_toStartOf="parent"
+                android:text="Remarks"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"/>
+            <EditText
+                android:id="@+id/remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_bg"
+                android:hint="Enter remarks"
+                app:layout_constraintTop_toBottomOf="@id/reamrk_Text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="15dp"
+                android:layout_marginTop="15dp"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="5dp"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/remarkbtn_bg"
+                app:layout_constraintTop_toBottomOf="@id/remarks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="15dp"
+                android:text="Send Request"
+                android:textColor="@color/white" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/deatils_card"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:cardCornerRadius="20dp"-->
+    <!--        app:cardElevation="20dp"-->
+    <!--        app:cardUseCompatPadding="true"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/relcard"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:orientation="vertical"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:gravity="center">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="50dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:src="@drawable/logo_eshiksa"/>-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/text_name"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:text="@string/route_change"-->
+    <!--                android:textColor="@color/purple_500"-->
+    <!--                android:textSize="20sp"-->
+    <!--                android:textStyle="bold" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/lin"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_margin="10dp"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            android:gravity="center">-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/fromDate_btn"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_weight=".5"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:gravity="center"-->
+    <!--                android:textColor="@color/purple_500"-->
+    <!--                android:textAllCaps="false"-->
+    <!--                android:layout_marginRight="10dp"-->
+    <!--                android:background="@drawable/loginborder"-->
+    <!--                android:hint="@string/fromDate" />-->
+    <!--            <TextView-->
+    <!--                android:id="@+id/toDate_btn"-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_weight=".5"-->
+    <!--                android:gravity="center"-->
+    <!--                android:textAllCaps="false"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:layout_marginLeft="10dp"-->
+    <!--                android:textColor="@color/purple_500"-->
+    <!--                android:background="@drawable/loginborder"-->
+    <!--                android:hint="@string/toDate" />-->
+
+    <!--        </LinearLayout>-->
+    <!--            <EditText-->
+    <!--                android:id="@+id/remarks"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="40dp"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:layout_margin="10dp"-->
+    <!--                android:paddingStart="10dp"-->
+    <!--                android:hint="Enter remarks"-->
+    <!--                android:background="@drawable/loginborder"/>-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/submit_btn"-->
+    <!--                android:layout_width="200dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerHorizontal="true"-->
+    <!--                android:layout_marginTop="15dp"-->
+    <!--                android:layout_margin="10dp"-->
+    <!--                android:textColor="@color/white"-->
+    <!--                android:background="@drawable/loginborder"-->
+    <!--                android:backgroundTint="@color/purple_500"-->
+    <!--                android:text="Submit" />-->
+
+    <!--        </LinearLayout>-->
+
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

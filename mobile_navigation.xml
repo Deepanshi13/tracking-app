@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.getepay.transportapp.activities.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_expenses"
+        android:name="com.getepay.transportapp.activities.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.getepay.transportapp.activities.ui.fragments.ReportFragment"
+        android:label="@string/title_report"
+        tools:layout="@layout/fragment_report" />
+    <fragment
+        android:id="@+id/navigation_addFuelConsumption"
+        android:name="com.getepay.transportapp.activities.ui.fragments.AddFuelConsumptionFragment"
+        android:label="@string/title_report"
+        tools:layout="@layout/fragment_fuel_consumption" />
+
+    <fragment
+        android:id="@+id/navigation_route"
+        android:name="com.getepay.transportapp.activities.ui.home.RouteFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_route" />
+    <fragment
+        android:id="@+id/navigation_expense"
+        android:name="com.getepay.transportapp.activities.ui.fragments.ExpenseFragment"
+        android:label="Expense"
+        tools:layout="@layout/fragment_expense"/>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.getepay.transportapp.activities.ui.fragments.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile"/>
+    <fragment
+        android:id="@+id/nav_routechange"
+        android:name="com.getepay.transportapp.activities.ui.fragments.RouteChange_Fragment"
+        android:label="Route Change"
+        tools:layout="@layout/fragment_route_change_"/>
+    <fragment
+        android:id="@+id/fuelConsumptionListFragment"
+        android:name="com.getepay.transportapp.activities.ui.fragments.FuelConsumptionListFragment"
+        android:label="fragment_fuel_consumption2"
+        tools:layout="@layout/fragment_fuel_consumption2" />
+    <fragment
+        android:id="@+id/bellNotificationFragment"
+        android:name="com.getepay.transportapp.activities.ui.fragments.BellNotificationFragment"
+        android:label="fragment_bell_notification"
+        tools:layout="@layout/fragment_bell_notification" />
+</navigation>

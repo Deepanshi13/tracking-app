@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/darkblue_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/ic_newlauncher"/>
+    <LinearLayout
+        android:id="@+id/img_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@id/logo_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+        <ImageView
+            android:id="@+id/e_tracki"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="0.5"
+            android:layout_marginStart="45dp"
+            android:src="@drawable/e_tracking"
+            />
+
+        <ImageView
+            android:id="@+id/bus_logo"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="12dp"
+            android:src="@drawable/bus_img1"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+
+
+    </LinearLayout>
+    <!--</androidx.cardview.widget.CardView>-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/border_desgin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_layout"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="@color/darkblue"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/loginText">
+
+            <TextView
+                android:id="@+id/usernameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@drawable/text_bg"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="User Name"
+                android:textColor="@color/darkblue"
+                android:textSize="12sp"
+                android:translationX="35dp"
+                android:translationY="5dp"
+                android:translationZ="8dp" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_48"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginTop="@dimen/margin_16"
+                android:layout_marginRight="@dimen/margin_16"
+                android:background="@drawable/edittext_bg"
+                android:drawablePadding="@dimen/margin_8"
+                android:inputType="textPersonName"
+                android:padding="@dimen/margin_8"
+                android:singleLine="true" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout1"
+
+            tools:ignore="NotSibling">
+
+            <TextView
+                android:id="@+id/passwordText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:background="@drawable/text_bg"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:text="Password"
+                android:textColor="@color/darkblue"
+                android:textSize="12sp"
+                android:translationX="35dp"
+                android:translationY="5dp"
+                android:translationZ="8dp"
+
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:passwordToggleEnabled="true"
+                android:layout_gravity="center"
+                app:passwordToggleTint="@color/purple_200">
+
+                <EditText
+                    android:id="@+id/edPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_marginLeft="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginRight="@dimen/margin_16"
+                    android:background="@drawable/edittext_bg"
+                    android:inputType="textPassword"
+                    android:padding="@dimen/margin_8"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </FrameLayout>
+
+
+        <CheckBox
+            android:id="@+id/checkMe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:textColorHighlight="#29406A"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+
+        <TextView
+            android:id="@+id/remeberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Remember Me"
+            android:visibility="gone"
+            android:textColor="#6F6F6F"
+            app:layout_constraintStart_toEndOf="@id/checkMe"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+
+
+        <TextView
+            android:id="@+id/txtForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="18dp"
+            android:text="Forgot password?"
+            android:textColor="#00379B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/logibbtn_bg"
+            android:paddingHorizontal="45dp"
+            android:paddingVertical="10dp"
+            android:text="Login"
+            android:textColor="#00379B"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_28"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="@string/powered_by"
+            android:textColor="#b9b0b0"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:showIn="@layout/activity_login">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/image"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:src="@drawable/logo_eshiksa"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:cardCornerRadius="10dp"-->
+<!--            app:cardElevation="10dp"-->
+<!--            app:cardUseCompatPadding="true"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:gravity="left"-->
+<!--                    android:padding="@dimen/margin_8"-->
+<!--                    android:text="LOGIN"-->
+<!--                    android:textColor="@color/purple_500"-->
+<!--                    android:textSize="@dimen/sp_24"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/edUsername"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="50dp"-->
+<!--                    android:layout_marginLeft="@dimen/margin_16"-->
+<!--                    android:layout_marginTop="@dimen/margin_16"-->
+<!--                    android:layout_marginRight="@dimen/margin_16"-->
+<!--                    android:background="@drawable/loginborder2"-->
+<!--                    android:drawableLeft="@drawable/ic_username"-->
+<!--                    android:drawablePadding="@dimen/margin_8"-->
+<!--                    android:hint="Username"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:padding="@dimen/margin_8"-->
+<!--                    android:singleLine="true" />-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/edPassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="@dimen/margin_48"-->
+<!--                    android:layout_marginLeft="@dimen/margin_16"-->
+<!--                    android:layout_marginTop="@dimen/margin_16"-->
+<!--                    android:layout_marginRight="@dimen/margin_16"-->
+<!--                    android:background="@drawable/loginborder2"-->
+<!--                    android:drawableLeft="@drawable/ic_password"-->
+<!--                    android:drawablePadding="@dimen/margin_8"-->
+<!--                    android:hint="Password"-->
+<!--                    android:inputType="textPassword"-->
+<!--                    android:padding="@dimen/margin_8"-->
+<!--                    android:singleLine="true" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/txtForgotPassword"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="right"-->
+<!--                    android:layout_marginTop="@dimen/margin_16"-->
+<!--                    android:layout_marginRight="@dimen/margin_16"-->
+<!--                    android:text="@string/forgot_password"-->
+<!--                    android:textColor="@color/purple_500"-->
+<!--                    android:textSize="@dimen/sp_16"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <Button-->
+<!--                    android:id="@+id/btnLogin"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="@dimen/margin_40"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:layout_marginLeft="@dimen/margin_16"-->
+<!--                    android:layout_marginTop="@dimen/margin_24"-->
+<!--                    android:layout_marginRight="@dimen/margin_16"-->
+<!--                    android:layout_marginBottom="@dimen/margin_8"-->
+<!--                    android:background="@drawable/loginborder3"-->
+<!--                    android:text="Submit"-->
+<!--                    android:textColor="@android:color/white"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </LinearLayout>-->
+<!--        </androidx.cardview.widget.CardView>-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <ProgressBar
+        android:id="@+id/spinner_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/map"
+        android:title="Route"
+        android:iconTint="@color/purple_500"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/navigation_expenses"
+        android:icon="@drawable/directionbus_yellow"
+        android:title="Expense"
+        android:iconTint="@color/purple_500"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/nav_routechange"
+        android:icon="@drawable/route_change"
+        android:title="Route Change"
+        android:iconTint="@color/purple_500"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/baseline_person_pin_24"
+        android:title="Profile"
+        android:iconTint="@color/purple_500"
+        android:visible="true"/>
+    <item
+        android:id="@+id/navigation_logout"
+        android:icon="@drawable/logout"
+        android:title="Logout"
+        android:visible="false"/>
+<!--    <item-->
+<!--        android:id="@+id/navigation_report"-->
+<!--        android:icon="@drawable/ic_notifications_black_24dp"-->
+<!--        android:title="@string/title_report"-->
+<!--        android:visible="false"/>-->
+
+</menu>

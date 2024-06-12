@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/routeCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="12dp"
+                android:background="@color/grey_10" />
+
+            <ImageView
+                android:id="@+id/check_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/circle"
+                app:tint="#9CCC65" />
+
+            <ImageView
+                android:id="@+id/bus_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/bus_logo" />
+
+            <ImageView
+                android:id="@+id/bus_image1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:visibility="visible"
+                app:srcCompat="@drawable/bus_logo" />
+
+
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/routeCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rel"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/const_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/stop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:paddingVertical="8dp"
+                    android:text="Stop Name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                            android:id="@+id/stop_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Stop Time"
+                            android:textColor="@color/darkblue"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/stop_name" />
+
+
+                <LinearLayout
+                    android:id="@+id/time_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="9dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@id/routeChange"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:src="@drawable/watch_later" />
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stop_time">
+
+                    <TextView
+                        android:id="@+id/delay_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/edit_bg"
+                        android:drawableStart="@drawable/direction"
+                        android:gravity="center"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="4dp"
+                        android:text="652m"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/student_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="15dp"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/edit_bg"
+                        android:drawableStart="@drawable/count_icon"
+                        android:gravity="center"
+                        android:paddingVertical="4dp"
+                        android:paddingHorizontal="4dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/routeChange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@drawable/logibbtn_bg"
+                    android:drawableStart="@drawable/route"
+                    android:padding="6dp"
+                    android:singleLine="true"
+                    android:text="Route Change"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ll"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/time_layout" />
+                <TextView
+                    android:id="@+id/arrived"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Bus has not been arrived"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="5dp"
+                    android:textStyle="normal"
+                    android:layout_marginStart="8dp"
+                   app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:id="@+id/rel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintEnd_toStartOf="@+id/routeCard"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <View-->
+    <!--                android:id="@+id/view1"-->
+    <!--                android:layout_width="5dp"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_alignParentTop="true"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:background="@color/grey_10" />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/check_image"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="30dp"-->
+    <!--                android:padding="10dp"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                android:layout_marginTop="20dp"-->
+    <!--                app:srcCompat="@drawable/circle"-->
+    <!--                app:tint="#9CCC65"-->
+    <!--                />-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/bus_image"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="30dp"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                app:srcCompat="@drawable/bus_icon"-->
+    <!--                android:visibility="visible"/>-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/bus_image1"-->
+    <!--                android:layout_width="30dp"-->
+    <!--                android:layout_height="30dp"-->
+    <!--                android:layout_alignParentBottom="true"-->
+    <!--                android:visibility="visible"-->
+    <!--                app:srcCompat="@drawable/bus_icon"-->
+    <!--                />-->
+
+
+    <!--        </RelativeLayout>-->
+    <!--        <androidx.cardview.widget.CardView-->
+    <!--            android:id="@+id/routeCard"-->
+    <!--            android:layout_width="0dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:cardCornerRadius="10dp"-->
+    <!--            app:cardElevation="10dp"-->
+    <!--            app:cardUseCompatPadding="true"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/rel">-->
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--        android:id="@+id/cl"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:background="@color/lihtsky">-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/stop_name"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="10dp"-->
+    <!--            android:paddingVertical="8dp"-->
+    <!--            android:text="Stop Name"-->
+    <!--            android:textColor="@color/darkblue"-->
+    <!--            android:textSize="14sp"-->
+    <!--            android:textStyle="bold"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/stop_time"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="10dp"-->
+    <!--            android:text="Stop Time"-->
+    <!--            android:textColor="@color/darkblue"-->
+    <!--            android:textSize="14sp"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/stop_name" />-->
+
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/time"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_marginStart="9dp"-->
+    <!--            android:text="Time"-->
+    <!--            android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+    <!--            android:textColor="#000"-->
+    <!--            android:textSize="14sp"-->
+    <!--            android:textStyle="normal"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/stop_time" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/arrived"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Bus has not been arrived"-->
+    <!--            android:layout_marginStart="9dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+    <!--            android:textColor="#000"-->
+    <!--            android:textSize="14sp"-->
+    <!--            android:textStyle="normal"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/time" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatButton-->
+    <!--            android:id="@+id/routeChange"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="25dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_marginEnd="5dp"-->
+    <!--            android:background="@drawable/route_bg"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="Route Change"-->
+    <!--            android:textAllCaps="false"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="8dp"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/delay_time"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="0dp"-->
+    <!--            android:layout_marginTop="5dp"-->
+    <!--            android:layout_marginEnd="10dp"-->
+    <!--            android:text="Taylor W  "-->
+    <!--            android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+    <!--            android:textColor="@color/red"-->
+    <!--            app:layout_constraintEnd_toEndOf="parent"-->
+    <!--            app:layout_constraintTop_toBottomOf="@id/routeChange" />-->
+
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    <!--        </androidx.cardview.widget.CardView>-->
+    <!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+

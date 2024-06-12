@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Transport App</string>
+
+
+    <string name="btn_ok">OK</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_no">No</string>
+    <string name="text_tracking_alert">Start Tracking with Attendance ?</string>
+    <string name="text_route_name">Route Name </string>
+    <string name="text_students_attendance">Student Attendance </string>
+    <string name="text_students_boarded">Students Boarded </string>
+    <string name="text_students_absent">Students Absent </string>
+    <string name="text_stop_journey">Are you sure you want to stop journey ?</string>
+    <string name="text_select_route">Select your route</string>
+    <string name="text_start_new">Do you want to start a new journey ?</string>
+    <string name="text_select_stop">Select stop</string>
+    <string name="title_activity_de">DeActivity</string>
+    <string name="text_ride_duration">Ride Duration</string>
+    <string name="text_distance_travelled">Distance Travelled</string>
+    <string name="text_end_time">End Time</string>
+    <string name="text_student_name">Student Name</string>
+    <string name="text_save">Save</string>
+    <string name="text_username">Username</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="invalid">Invalid username or password</string>
+    <string name="timeout">Socket Timeout</string>
+    <!--    <string name="google_maps_web_services_key">AIzaSyAcXgGZ0d9ujapO3SMXvq5EeVG1Utb4wVI</string>-->
+    <string name="google_maps_web_services_key">AIzaSyBvGiIxpSaqcVxoiB3jVssyAJIlSdy5OsU</string>
+    <!--<string name="google_maps_web_services_key">AIzaSy\BvGiIxpSaqcVxoiB3jVssyAJIlSdy5OsU</string>-->
+    <string name="text_resume_journey_alert">Do you want to continue previous journey ?</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="enter_email">Email</string>
+    <string name="select_distance">Select Distance</string>
+    <string name="powered_by">Powered By</string>
+
+    <string name="want_to">Are you sure you want to mark attendance</string>
+    <string name="title_activity_main4">MainActivity4</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_expense">Expense</string>
+    <string name="title_report">Report</string>
+    <string name="title_addfuel">Fuel Consumption</string>
+    <string name="title_route">Route Change</string>
+    <string name="title_track">Track</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="something_went_wrong_n_please_try_again_after_sometime_n_thank_you">Something went wrong!! \n Please try again after sometime. \n Thank you.</string>
+    <string name="select_route">Please select Route</string>
+    <string name="route_change">Route Change Request</string>
+    <string name="close">Close</string>
+    <string name="pickuo">Pick Up</string>
+    <string name="drop">Drop</string>
+    <string name="fromDate">From Date</string>
+    <string name="toDate">To Date</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">channelId</string>
+    <!--    new string Deepanshi-->
+    <string name="Title">Title</string>
+    <string name="Enter_title">Enter title</string>
+    <string name="Enter_Amount">Enter Amount</string>
+    <string name="Description">Description</string>
+    <string name="Transport_Expenses">Transport Expenses</string>
+    <string name="Fuel_Consumption">Fuel Consumption</string>
+
+
+    <!--    new string vinit-->
+
+    <string name="transport_expense">Transport Expenses</string>
+    <string name="fuel_litrs">Fuel in Ltrs</string>
+    <string name="amount">Amount (₹)</string>
+    <string name="date">Date</string>
+
+
+</resources>
